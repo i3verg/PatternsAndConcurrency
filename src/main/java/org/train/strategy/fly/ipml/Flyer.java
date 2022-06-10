@@ -10,11 +10,11 @@ public abstract class Flyer {
     }
 
     public void setFlyBehavior(FlyBehavior fBehavior) {
-        flyBehavior = fBehavior;
+        this.flyBehavior = fBehavior;
     }
 
     public void setEnginesBehavior(EnginesBehavior eBehavior) {
-        enginesBehavior = eBehavior;
+        this.enginesBehavior = eBehavior;
     }
 
     public void performFlying(){

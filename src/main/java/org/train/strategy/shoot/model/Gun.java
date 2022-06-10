@@ -10,6 +10,6 @@ public abstract class Gun {
     }
 
     public void setShootBehavior(ShootBehavior sBehavior) {
-        shootBehavior = sBehavior;
+        this.shootBehavior = sBehavior;
     }
 }
