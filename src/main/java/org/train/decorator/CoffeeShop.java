@@ -19,8 +19,14 @@ public class CoffeeShop {
         beverage.setSize(Beverage.Size.GRANDE);
         beverageLast = new Soy(beverage);
 
-        System.out.println("last bev is " + beverageLast.getDesc() + " it cost " + beverageLast.cost());
+        Beverage beverage1 = new Espresso();
 
+        Mocha mocha = new Mocha(new Whip(beverage1));
+
+
+        System.out.println("last bev is " + beverageLast.getDesc() + " it cost " + beverageLast.cost());
+        System.out.println(mocha.getDesc());
+        System.out.println(mocha.cost());
 
     }
 }
