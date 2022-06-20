@@ -1,4 +1,4 @@
-package org.train.command.impl;
+package org.train.command.commandimpl;
 
 import org.train.command.base.Command;
 

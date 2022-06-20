@@ -1,6 +1,12 @@
 package org.train.command.model.receiver;
 
-public class Musik {
+public class Stereo {
+
+    String name;
+
+    public Stereo(String name) {
+        this.name = name;
+    }
 
     public void onStereo(){
         System.out.println("Stereo is on");

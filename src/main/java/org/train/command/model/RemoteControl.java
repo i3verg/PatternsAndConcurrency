@@ -1,7 +1,7 @@
 package org.train.command.model;
 
 import org.train.command.base.Command;
-import org.train.command.impl.NoneCommand;
+import org.train.command.commandimpl.NoneCommand;
 
 import java.util.ArrayList;
 import java.util.List;
