@@ -7,4 +7,9 @@ public class NoneCommand implements Command {
     public void execute() {
 
     }
+
+    /*@Override
+    public void undo() {
+
+    }*/
 }

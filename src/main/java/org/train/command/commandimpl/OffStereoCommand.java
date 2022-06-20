@@ -13,4 +13,9 @@ public class OffStereoCommand implements Command {
     public void execute() {
         musik.offStereo();
     }
+
+    /*@Override
+    public void undo() {
+        musik.onStereo();
+    }*/
 }

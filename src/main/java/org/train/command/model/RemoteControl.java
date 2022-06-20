@@ -9,17 +9,16 @@ import java.util.List;
 public class RemoteControl {
     List<Command> onCommandList;
     List<Command> offCommandList;
+    Command undoCommand;
 
     public RemoteControl() {
         this.onCommandList = new ArrayList<>(7);
         this.offCommandList = new ArrayList<>(7);
-
-        Command initCommand = new NoneCommand();
-
         for (int i = 0; i < 7; i++) {
-            onCommandList.add(i, initCommand);
-            offCommandList.add(i, initCommand);
+            onCommandList.add(i, ()->{});
+            offCommandList.add(i, ()->{});
         }
+        undoCommand = ()->{};
     }
 
     public void setCommand(int position, Command onCommand, Command offCommand) {
@@ -29,10 +28,16 @@ public class RemoteControl {
 
     public void onCommandExecuted(int position) {
         onCommandList.get(position).execute();
+        undoCommand = onCommandList.get(position);
     }
 
     public void offCommandExecuted(int position) {
         offCommandList.get(position).execute();
+        undoCommand = offCommandList.get(position);
+    }
+
+    public void undoCommandExecuted() {
+        //undoCommand.undo();
     }
 
     @Override

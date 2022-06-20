@@ -32,11 +32,14 @@ public class CommandLoader {
         remoteControl.setCommand(2, garageLightOn, garageLightOff);
         remoteControl.setCommand(3, garageStereoOn, garageStereoOff);
 
+        remoteControl.setCommand(4, garageStereo::onStereo, garageStereo::offStereo);
+
         System.out.println(remoteControl);
 
         remoteControl.onCommandExecuted(0);
         remoteControl.onCommandExecuted(1);
-
-
+        remoteControl.offCommandExecuted(0);
+        remoteControl.onCommandExecuted(4);
+        remoteControl.undoCommandExecuted();
     }
 }
