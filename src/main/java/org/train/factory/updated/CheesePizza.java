@@ -7,7 +7,7 @@ public class CheesePizza extends AbstractPizza {
         this.pizzaIngredientFactory = pizzaIngredientFactory;
     }
     void preparePizza() {
-        System.out.println("Preparing " + name);
+        System.out.println("Preparing " + getName());
         dough = pizzaIngredientFactory.createDough();
         sauce = pizzaIngredientFactory.createSauce();
         cheese = pizzaIngredientFactory.createCheese();
