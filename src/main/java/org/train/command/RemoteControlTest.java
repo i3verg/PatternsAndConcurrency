@@ -2,8 +2,8 @@ package org.train.command;
 
 import org.train.command.impl.GarageDoorOpenCommand;
 import org.train.command.impl.LightOnCommand;
-import org.train.command.model.GarageDoor;
-import org.train.command.model.Light;
+import org.train.command.model.receiver.GarageDoor;
+import org.train.command.model.receiver.Light;
 import org.train.command.model.SimpleRemoteControl;
 
 //client

@@ -1,7 +1,7 @@
 package org.train.command.impl;
 
 import org.train.command.base.Command;
-import org.train.command.model.GarageDoor;
+import org.train.command.model.receiver.GarageDoor;
 
 public class GarageDoorOpenCommand implements Command {
     GarageDoor garageDoor;

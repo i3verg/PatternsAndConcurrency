@@ -1,4 +1,4 @@
-package org.train.command.model;
+package org.train.command.model.receiver;
 
 public class GarageDoor {
     public void upDoor(){

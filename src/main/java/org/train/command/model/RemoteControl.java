@@ -40,8 +40,9 @@ public class RemoteControl {
         StringBuilder stringBuffer = new StringBuilder();
         stringBuffer.append("\n-----Remote control------\n");
         for (int i = 0; i < onCommandList.size(); i++) {
-            stringBuffer.append("[Command slot ").append(i).append("] ").append(onCommandList.get(i).getClass().getName())
-                    .append("   ").append(offCommandList.get(i).getClass().getName()).append("\n");
+            stringBuffer.append("[Command slot ").append(i).append("] ")
+                    .append(onCommandList.get(i).getClass().getName()).append("   ")
+                    .append(offCommandList.get(i).getClass().getName()).append("\n");
         }
         return stringBuffer.toString();
     }
