@@ -2,10 +2,13 @@ package org.train.templatemthod;
 
 public class TemplateMethodTestDrive {
     public static void main(String[] args) {
-        Tea tea = new Tea();
-        Coffee coffee = new Coffee();
+       /* Tea tea = new Tea();
+        Coffee coffee = new Coffee();*/
 
-        tea.prepareRecipe();
-        coffee.prepareRecipe();
+        CoffeeWithHook coffeeWithHook = new CoffeeWithHook();
+        coffeeWithHook.prepareRecipe();
+
+        /*tea.prepareRecipe();
+        coffee.prepareRecipe();*/
     }
 }

@@ -1,10 +1,10 @@
 package org.train.templatemthod;
 
 public class Coffee extends CaffeineBeverage{
-    public void brew() {
+    void brew() {
         System.out.println("Dripping coffee through filter");
     }
-    public void addCondiments() {
+    void addCondiments() {
         System.out.println("Adding Sugar and Milk");
     }
 }
