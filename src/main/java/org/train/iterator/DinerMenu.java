@@ -2,7 +2,7 @@ package org.train.iterator;
 
 import java.util.Iterator;
 
-public class DinerMenu {
+public class DinerMenu implements Menu{
     static final int MAX_ITEMS = 6;
     int numberOfItems = 0;
     MenuItem[] menuItems;
@@ -22,7 +22,9 @@ public class DinerMenu {
             numberOfItems = numberOfItems + 1;
         }
     }
-    public Iterator createIterator(){
+
+    @Override
+    public Iterator<MenuItem> createIterator() {
         return new DinnerMenuIterator(menuItems);
     }
 }

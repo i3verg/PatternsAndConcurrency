@@ -5,7 +5,7 @@ import java.util.Iterator;
 
 public class PancakeMenuIterator implements Iterator {
     ArrayList<MenuItem> menuItems;
-    Iterator iterator;
+    Iterator<MenuItem> iterator;
 
     public PancakeMenuIterator(ArrayList<MenuItem> menuItems) {
         this.menuItems = menuItems;
@@ -18,7 +18,7 @@ public class PancakeMenuIterator implements Iterator {
     }
 
     @Override
-    public Object next() {
+    public MenuItem next() {
         return iterator.next();
     }
 }
