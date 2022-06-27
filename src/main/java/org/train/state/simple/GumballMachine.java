@@ -7,7 +7,7 @@ public class GumballMachine {
     State noQuarterState;
     State hasQuarterState;
     State soldState;
-
+    State winnerState;
     State state;
     int count = 0;
 
@@ -36,17 +36,10 @@ public class GumballMachine {
         state.insertQuarter();
     }
 
-    public void ejectQuarter() {
-        state.ejectQuarter();
-    }
-
     public void turnCrank() {
         state.turnCrank();
         state.dispence();
     }
-    public void dispence() {
-    }
-
     public State getSoldOutState() {
         return soldOutState;
     }
@@ -73,6 +66,10 @@ public class GumballMachine {
 
     public void setState(State state) {
         this.state = state;
+    }
+
+    public State getWinnerState() {
+        return winnerState;
     }
 
 
