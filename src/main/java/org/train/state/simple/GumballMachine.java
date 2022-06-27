@@ -10,7 +10,6 @@ public class GumballMachine {
     State winnerState;
     State state;
     int count = 0;
-
     public GumballMachine(int count) {
         soldOutState = new SoldOutState(this);
         noQuarterState = new NoQuarterState(this);
