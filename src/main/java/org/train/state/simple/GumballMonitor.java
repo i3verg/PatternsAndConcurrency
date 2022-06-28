@@ -1,16 +1,24 @@
 package org.train.state.simple;
 
-public class GumballMonitor {
-    GumballMachine gumballMachine;
+import org.train.proxy.domain.GumballMachineRemote;
 
-    public GumballMonitor(GumballMachine gumballMachine) {
+import java.rmi.RemoteException;
+
+public class GumballMonitor {
+    GumballMachineRemote gumballMachine;
+
+    public GumballMonitor(GumballMachineRemote gumballMachine) {
         this.gumballMachine = gumballMachine;
     }
 
     public void report(){
-        System.out.println("Gumball Machine: " + gumballMachine.getLocation());
-        System.out.println("Current Inventory: " + gumballMachine.getCount() + " Gumballs");
-        System.out.println("Gumball Machine State: " + gumballMachine.getState());
+        try {
+            System.out.println("Gumball Machine: " + gumballMachine.getLocation());
+            System.out.println("Current Inventory: " + gumballMachine.getCount() + " Gumballs");
+            System.out.println("Gumball Machine State: " + gumballMachine.getMachineState());
+        } catch (RemoteException ex){
+            ex.printStackTrace();
+        }
     }
 
 

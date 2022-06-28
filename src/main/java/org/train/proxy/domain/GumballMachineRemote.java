@@ -6,7 +6,7 @@ import java.rmi.Remote;
 import java.rmi.RemoteException;
 
 public interface GumballMachineRemote extends Remote {
-    public int getCount() throws RemoteException;
-    public String getLocation() throws RemoteException;
-    public State getMachineState() throws RemoteException;
+    int getCount() throws RemoteException;
+    String getLocation() throws RemoteException;
+    State getMachineState() throws RemoteException;
 }

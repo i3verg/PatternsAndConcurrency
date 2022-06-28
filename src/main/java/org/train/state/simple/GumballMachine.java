@@ -1,10 +1,14 @@
 package org.train.state.simple;
 
+import org.train.proxy.domain.GumballMachineRemote;
 import org.train.state.extended.*;
 
-public class GumballMachine {
-    String location;
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 
+public class GumballMachine extends UnicastRemoteObject implements GumballMachineRemote {
+    public static final long serialVersionUID = 2L;
+    String location;
     State soldOutState;
     State noQuarterState;
     State hasQuarterState;
@@ -12,7 +16,7 @@ public class GumballMachine {
     State winnerState;
     State state;
     int count = 0;
-    public GumballMachine(String location, int count) {
+    public GumballMachine(String location, int count) throws RemoteException {
         soldOutState = new SoldOutState(this);
         noQuarterState = new NoQuarterState(this);
         hasQuarterState = new HasQuarterState(this);
@@ -62,7 +66,7 @@ public class GumballMachine {
         return count;
     }
 
-    public State getState() {
+    public State getMachineState() {
         return state;
     }
 
