@@ -4,7 +4,8 @@ import org.train.state.simple.GumballMachine;
 
 public class WinnerState implements State {
 
-    GumballMachine gumballMachine;
+    private static final long serialVersionUID = 2L;
+    transient GumballMachine gumballMachine;
 
     public WinnerState(GumballMachine gumballMachine) {
         this.gumballMachine = gumballMachine;

@@ -2,8 +2,11 @@ package org.train.state.extended;
 
 import org.train.state.simple.GumballMachine;
 
-public class SoldOutState implements State{
-    GumballMachine gumballMachine;
+public class SoldOutState implements State {
+
+    private static final long serialVersionUID = 2L;
+
+    transient GumballMachine gumballMachine;
 
     public SoldOutState(GumballMachine gumballMachine) {
         this.gumballMachine = gumballMachine;
@@ -16,7 +19,7 @@ public class SoldOutState implements State{
 
     @Override
     public void ejectQuarter() {
-            System.out.println("there is no quarter");
+        System.out.println("there is no quarter");
     }
 
     @Override

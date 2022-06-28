@@ -3,6 +3,8 @@ package org.train.state.simple;
 import org.train.state.extended.*;
 
 public class GumballMachine {
+    String location;
+
     State soldOutState;
     State noQuarterState;
     State hasQuarterState;
@@ -10,12 +12,13 @@ public class GumballMachine {
     State winnerState;
     State state;
     int count = 0;
-    public GumballMachine(int count) {
+    public GumballMachine(String location, int count) {
         soldOutState = new SoldOutState(this);
         noQuarterState = new NoQuarterState(this);
         hasQuarterState = new HasQuarterState(this);
         soldState = new SoldState(this);
         this.count = count;
+        this.location = location;
 
         if (count > 0) {
             state = noQuarterState;
@@ -71,5 +74,7 @@ public class GumballMachine {
         return winnerState;
     }
 
-
+    public String getLocation() {
+        return location;
+    }
 }
