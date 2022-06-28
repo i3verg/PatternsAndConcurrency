@@ -8,9 +8,7 @@ import java.util.Arrays;
 
 public class GumballMonitorTestDrive {
     public static void main(String[] args) {
-        String[] location = {"rmi://santafe.mightygumball.com/gumballmachine",
-                "rmi://boulder.mightygumball.com/gumballmachine",
-                "rmi://seattle.mightygumball.com/gumballmachine" };
+        String[] location = {"rmi://localhost/Remote"};
 
         GumballMonitor[] gumballMonitors = new GumballMonitor[location.length];
 

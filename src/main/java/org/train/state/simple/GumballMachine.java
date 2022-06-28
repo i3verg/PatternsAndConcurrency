@@ -16,6 +16,7 @@ public class GumballMachine extends UnicastRemoteObject implements GumballMachin
     State winnerState;
     State state;
     int count = 0;
+
     public GumballMachine(String location, int count) throws RemoteException {
         soldOutState = new SoldOutState(this);
         noQuarterState = new NoQuarterState(this);
@@ -46,6 +47,7 @@ public class GumballMachine extends UnicastRemoteObject implements GumballMachin
         state.turnCrank();
         state.dispence();
     }
+
     public State getSoldOutState() {
         return soldOutState;
     }

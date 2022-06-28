@@ -11,16 +11,15 @@ public class GumballMonitor {
         this.gumballMachine = gumballMachine;
     }
 
-    public void report(){
+    public void report() {
         try {
             System.out.println("Gumball Machine: " + gumballMachine.getLocation());
             System.out.println("Current Inventory: " + gumballMachine.getCount() + " Gumballs");
             System.out.println("Gumball Machine State: " + gumballMachine.getMachineState());
-        } catch (RemoteException ex){
+        } catch (RemoteException ex) {
             ex.printStackTrace();
         }
     }
-
 
 
 }

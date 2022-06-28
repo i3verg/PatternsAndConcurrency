@@ -2,9 +2,11 @@ package org.train.state.extended;
 
 import org.train.state.simple.GumballMachine;
 
+import java.rmi.RemoteException;
+
 public class DemoGumm {
-    public static void main(String[] args) {
-        GumballMachine gumballMachine = new GumballMachine(args[1], 5);
+    /*public static void main(String[] args) throws RemoteException {
+        GumballMachine gumballMachine = new GumballMachine(args[1], args[0]);
 
         System.out.println(gumballMachine.getMachineState());
 
@@ -20,5 +22,5 @@ public class DemoGumm {
         gumballMachine.turnCrank();
 
         System.out.println(gumballMachine.getMachineState());
-    }
+    }*/
 }
