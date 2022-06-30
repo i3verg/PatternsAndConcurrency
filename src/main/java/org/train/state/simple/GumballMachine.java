@@ -7,6 +7,7 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
 public class GumballMachine extends UnicastRemoteObject implements GumballMachineRemote {
+
     public static final long serialVersionUID = 2L;
     String location;
     State soldOutState;

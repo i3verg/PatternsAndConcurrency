@@ -16,7 +16,7 @@ public class CoffeeShop {
         System.out.println("it cost " + anotherBeverage.cost());
 
         Beverage beverageLast = new Espresso();
-        beverage.setSize(Beverage.Size.GRANDE);
+        beverageLast.setSize(Beverage.Size.GRANDE);
         beverageLast = new Soy(beverage);
 
         Beverage beverage1 = new Espresso();
