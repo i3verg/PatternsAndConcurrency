@@ -6,20 +6,20 @@ import java.util.ArrayList;
 
 
 public class Observable implements ShootObservable {
-    ArrayList<Observer> shootingObservables = new ArrayList<>();
-    ShootObservable shootingObservable;
+    ArrayList<Observer> shootObservables = new ArrayList<>();
+    ShootObservable shootObservable;
     public Observable(ShootObservable shootingObservable) {
-        this.shootingObservable = shootingObservable;
+        this.shootObservable = shootingObservable;
     }
 
     @Override
     public void registerObserver(Observer observer) {
-        shootingObservables.add(observer);
+        shootObservables.add(observer);
     }
 
     @Override
     public void notifyObservers() {
-        shootingObservables.forEach(el -> el.update(shootingObservable)
+        shootObservables.forEach(el -> el.update(shootObservable)
         );
     }
 }

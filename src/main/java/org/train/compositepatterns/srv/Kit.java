@@ -4,12 +4,11 @@ import org.train.compositepatterns.domain.Observer;
 import org.train.compositepatterns.domain.Shootable;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class Kit implements Shootable {
     ArrayList<Shootable> shootKit = new ArrayList<>();
 
-    public void add(Shootable subject){
+    public void add(Shootable subject) {
         shootKit.add(subject);
     }
 
@@ -21,10 +20,7 @@ public class Kit implements Shootable {
 
     @Override
     public void registerObserver(Observer observer) {
-        Iterator<Shootable> iterator = shootKit.iterator();
-        while (iterator.hasNext()){
-            Shootable weapon = iterator.next();
-            weapon.registerObserver(observer);        }
+        shootKit.forEach(weapon -> weapon.registerObserver(observer));
     }
 
     @Override

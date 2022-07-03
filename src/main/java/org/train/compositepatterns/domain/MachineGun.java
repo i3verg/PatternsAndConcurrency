@@ -3,7 +3,6 @@ package org.train.compositepatterns.domain;
 import org.train.compositepatterns.srv.Observable;
 
 public class MachineGun implements Shootable {
-
     Observable observable;
 
     public MachineGun() {
