@@ -1,18 +1,19 @@
 package org.train.compositepatterns.domain;
 
 import org.train.compositepatterns.srv.Observable;
+import org.train.compositepatterns.srv.ShootingObservable;
 
-public class MachineGun implements Shooting {
+public class ShootGun implements Shooting {
 
     Observable observable;
 
-    public MachineGun() {
+    public ShootGun() {
         observable = new Observable(this);
     }
 
     @Override
     public void shoot() {
-        System.out.println("Shoot from Machine gun!!!");
+        System.out.println("Shoot from shoot gun");
         notifyObservers();
     }
 

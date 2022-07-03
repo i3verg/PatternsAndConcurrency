@@ -10,7 +10,7 @@ public class GunFactory extends AbstractGunFactory {
 
     @Override
     public Shooting createDoomShootGun() {
-        return new Shootgun();
+        return new ShootGun();
     }
 
     @Override

@@ -10,7 +10,7 @@ public class CountingShootingFactory extends AbstractGunFactory{
 
     @Override
     public Shooting createDoomShootGun() {
-        return new ShootCounter(new Shootgun());
+        return new ShootCounter(new ShootGun());
     }
 
     @Override

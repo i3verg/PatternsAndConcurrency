@@ -14,7 +14,19 @@ public class ShootCounter implements Shooting {
         numberOfShoots++;
     }
 
-    public static int getShoots(){
+    public static int getShoots() {
         return numberOfShoots;
+    }
+
+    @Override
+    public void registerObserver(Observer observer) {
+
+        weapon.registerObserver(observer);
+    }
+
+    @Override
+    public void notifyObservers() {
+
+        weapon.notifyObservers();
     }
 }
