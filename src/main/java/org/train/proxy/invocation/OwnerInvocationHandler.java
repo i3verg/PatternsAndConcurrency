@@ -3,7 +3,6 @@ package org.train.proxy.invocation;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.lang.reflect.Proxy;
 
 public class OwnerInvocationHandler implements InvocationHandler {
     PersonBean personBean;
@@ -26,11 +25,5 @@ public class OwnerInvocationHandler implements InvocationHandler {
             ex.printStackTrace();
         }
         return null;
-    }
-
-    PersonBean getOwnerProxy(PersonBean personBean) {
-        return (PersonBean) Proxy.newProxyInstance(personBean.getClass().getClassLoader(),
-                personBean.getClass().getInterfaces(),
-                new OwnerInvocationHandler(personBean));
     }
 }

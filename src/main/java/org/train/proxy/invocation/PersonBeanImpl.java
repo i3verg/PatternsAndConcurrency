@@ -6,6 +6,11 @@ public class PersonBeanImpl implements PersonBean {
     int rating;
     int ratingCount = 0;
 
+    public PersonBeanImpl(String name, int rating, int ratingCount) {
+        this.name = name;
+        this.rating = rating;
+        this.ratingCount = ratingCount;
+    }
 
     @Override
     public String getName() {
