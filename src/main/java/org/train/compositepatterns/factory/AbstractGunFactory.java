@@ -1,10 +1,10 @@
 package org.train.compositepatterns.factory;
 
-import org.train.compositepatterns.domain.Shooting;
+import org.train.compositepatterns.domain.Shootable;
 
 public abstract class AbstractGunFactory {
-    public abstract Shooting createAssaultWeapon();
-    public abstract Shooting createDoomShootGun();
-    public abstract Shooting createToyGun();
+    public abstract Shootable createAssaultWeapon();
+    public abstract Shootable createDoomShootGun();
+    public abstract Shootable createToyGun();
 
 }

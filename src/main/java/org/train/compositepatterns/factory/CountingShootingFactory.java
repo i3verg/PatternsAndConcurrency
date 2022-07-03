@@ -4,17 +4,17 @@ import org.train.compositepatterns.domain.*;
 
 public class CountingShootingFactory extends AbstractGunFactory{
     @Override
-    public Shooting createAssaultWeapon() {
+    public Shootable createAssaultWeapon() {
         return new ShootCounter(new MachineGun());
     }
 
     @Override
-    public Shooting createDoomShootGun() {
+    public Shootable createDoomShootGun() {
         return new ShootCounter(new ShootGun());
     }
 
     @Override
-    public Shooting createToyGun() {
+    public Shootable createToyGun() {
         return new ShootCounter(new ToyGunAdapter(new ToyGun()));
     }
 }

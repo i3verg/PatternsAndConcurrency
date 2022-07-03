@@ -1,10 +1,10 @@
 package org.train.compositepatterns.domain;
 
-public class ShootCounter implements Shooting {
-    Shooting weapon;
+public class ShootCounter implements Shootable {
+    Shootable weapon;
     static int numberOfShoots;
 
-    public ShootCounter(Shooting weapon) {
+    public ShootCounter(Shootable weapon) {
         this.weapon = weapon;
     }
 

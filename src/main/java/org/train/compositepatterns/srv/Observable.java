@@ -5,10 +5,10 @@ import org.train.compositepatterns.domain.Observer;
 import java.util.ArrayList;
 
 
-public class Observable implements ShootingObservable {
+public class Observable implements ShootObservable {
     ArrayList<Observer> shootingObservables = new ArrayList<>();
-    ShootingObservable shootingObservable;
-    public Observable(ShootingObservable shootingObservable) {
+    ShootObservable shootingObservable;
+    public Observable(ShootObservable shootingObservable) {
         this.shootingObservable = shootingObservable;
     }
 

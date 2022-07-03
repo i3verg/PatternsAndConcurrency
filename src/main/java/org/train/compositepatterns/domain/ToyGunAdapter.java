@@ -1,11 +1,11 @@
 package org.train.compositepatterns.domain;
 
 import org.train.compositepatterns.srv.Observable;
-import org.train.compositepatterns.srv.ShootingObservable;
+import org.train.compositepatterns.srv.ShootObservable;
 
-public class ToyGunAdapter implements Shooting {
+public class ToyGunAdapter implements Shootable {
     ToyGun toyGun;
-    ShootingObservable observable;
+    ShootObservable observable;
 
     public ToyGunAdapter(ToyGun toyGun) {
         this.toyGun = toyGun;

@@ -2,7 +2,7 @@ package org.train.compositepatterns;
 
 import org.train.compositepatterns.domain.ShootCounter;
 import org.train.compositepatterns.domain.ShootLogist;
-import org.train.compositepatterns.domain.Shooting;
+import org.train.compositepatterns.domain.Shootable;
 import org.train.compositepatterns.factory.AbstractGunFactory;
 import org.train.compositepatterns.factory.CountingShootingFactory;
 import org.train.compositepatterns.srv.Kit;
@@ -15,10 +15,10 @@ public class GunSimulator {
     }
 
     void simulate(AbstractGunFactory abstractGunFactory) {
-        Shooting assaultWeapon = abstractGunFactory.createAssaultWeapon();
-        Shooting doomShootgun = abstractGunFactory.createDoomShootGun();
-        Shooting toyAssaultWeapon = abstractGunFactory.createToyGun();
-        Shooting testWeapon = abstractGunFactory.createAssaultWeapon();
+        Shootable assaultWeapon = abstractGunFactory.createAssaultWeapon();
+        Shootable doomShootgun = abstractGunFactory.createDoomShootGun();
+        Shootable toyAssaultWeapon = abstractGunFactory.createToyGun();
+        Shootable testWeapon = abstractGunFactory.createAssaultWeapon();
 
         System.out.println("Simulate");
 
@@ -37,12 +37,13 @@ public class GunSimulator {
 
         ShootLogist shootLogist = new ShootLogist();
         shootKit.registerObserver(shootLogist);
+        simulate(shootKit);
 
         System.out.println(ShootCounter.getShoots());
 
     }
 
-    void simulate(Shooting shooting) {
+    void simulate(Shootable shooting) {
         shooting.shoot();
     }
 }
